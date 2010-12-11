@@ -19,7 +19,8 @@ public class DivideWithoutOperator {
 	
 	// we can overload this method, changing the signature with different parameter lists
 	// http://download.oracle.com/javase/tutorial/java/javaOO/methods.html
-	public static long divideWithoutOperator(long dividend, long divisor){
+	public static long divideWithoutOperator(long dividend, long divisor)
+	{
 		long quotient = 0;
 		return quotient;
 	}
