@@ -57,5 +57,30 @@ public class DivideWithoutOperatorTest {
 		assertTrue(-3L == DivideWithoutOperator.divideWithoutOperator(6, -2));
 		assertTrue(3L == DivideWithoutOperator.divideWithoutOperator(-6, -2));
 }
+	
+	@Test
+	public void testdivideUsingLogsAndPower()
+	{
+		// TODO: test if divisor is 0, method returns error
+			
+		// test expected result is zero
+		assertEquals(0, DivideWithoutOperator.divideUsingLogsAndPower(0, 1.0), 0.000000000000002);
+		assertEquals(0.0, DivideWithoutOperator.divideUsingLogsAndPower(0, -1.0), 0.000000000000002);
+		assertEquals(0.0, DivideWithoutOperator.divideUsingLogsAndPower(0.0, 2.0), 0.000000000000002);
+
+		assertEquals(1.0, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 1.0), 0.000000000000002);
+
+		assertEquals(0.5, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 2.0), 0.000000000000002);
+		
+		assertEquals(2.0, DivideWithoutOperator.divideUsingLogsAndPower(2.0, 1.0), 0.000000000000002);
+		assertEquals(3.0, DivideWithoutOperator.divideUsingLogsAndPower(3.0, 1.0), 0.000000000000002);
+		
+		// test different combinations of sign
+		// System.out.println(DivideWithoutOperator.divideUsingLogsAndPower(-6.0, 2.0));
+		assertEquals(-3.0, DivideWithoutOperator.divideUsingLogsAndPower(-6.0, 2.0), 0.000000000000002);
+		assertEquals(-3.0, DivideWithoutOperator.divideUsingLogsAndPower(6.0, -2.0), 0.000000000000002);
+		assertEquals(3.0, DivideWithoutOperator.divideUsingLogsAndPower(-6.0, -2.0), 0.000000000000002);
+
+	}
 
 }
