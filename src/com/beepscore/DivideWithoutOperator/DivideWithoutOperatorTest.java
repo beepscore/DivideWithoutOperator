@@ -69,14 +69,20 @@ public class DivideWithoutOperatorTest {
 		assertEquals(0.0, DivideWithoutOperator.divideUsingLogsAndPower(0.0, 2.0), 0.000000000000002);
 
 		assertEquals(1.0, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 1.0), 0.000000000000002);
+		assertEquals(2.0, DivideWithoutOperator.divideUsingLogsAndPower(2.0, 1.0), 0.000000000000002);
+		assertEquals(2.0, DivideWithoutOperator.divideUsingLogsAndPower(13.2, 6.6), 0.000000000000002);
 
+		// test fractional results
+		assertEquals(0.5, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 2.0), 0.000000000000002);
+		assertEquals(0.333333333333333, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 3.0), 0.000000000000002);
+		assertEquals(-2.875, DivideWithoutOperator.divideUsingLogsAndPower(-23.0, 8.0), 0.000000000000002);
+		// System.out.println(DivideWithoutOperator.divideUsingLogsAndPower(7.0, -6.0));
+		assertEquals(-1.166666666666666, DivideWithoutOperator.divideUsingLogsAndPower(7.0, -6.0), 0.000000000000002);
 		assertEquals(0.5, DivideWithoutOperator.divideUsingLogsAndPower(1.0, 2.0), 0.000000000000002);
 		
-		assertEquals(2.0, DivideWithoutOperator.divideUsingLogsAndPower(2.0, 1.0), 0.000000000000002);
-		assertEquals(3.0, DivideWithoutOperator.divideUsingLogsAndPower(3.0, 1.0), 0.000000000000002);
+		assertEquals(5.0005, DivideWithoutOperator.divideUsingLogsAndPower(15.0015, 3.0), 0.000000000000002);
 		
 		// test different combinations of sign
-		// System.out.println(DivideWithoutOperator.divideUsingLogsAndPower(-6.0, 2.0));
 		assertEquals(-3.0, DivideWithoutOperator.divideUsingLogsAndPower(-6.0, 2.0), 0.000000000000002);
 		assertEquals(-3.0, DivideWithoutOperator.divideUsingLogsAndPower(6.0, -2.0), 0.000000000000002);
 		assertEquals(3.0, DivideWithoutOperator.divideUsingLogsAndPower(-6.0, -2.0), 0.000000000000002);

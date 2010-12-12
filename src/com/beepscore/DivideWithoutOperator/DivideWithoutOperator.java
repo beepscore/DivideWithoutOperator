@@ -32,7 +32,7 @@ public class DivideWithoutOperator {
 		// can't divide by zero
 		if (0 == divisor)
 		{
-			// throw error !!!!!!!!!!!!!!!!!!
+			// TODO throw error !!!!!!!!!!!!!!!!!!
 			return Long.MAX_VALUE;
 		}
 
